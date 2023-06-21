@@ -1,0 +1,21 @@
+.headerBlock{
+  display: block;
+  position: static;
+  height: 70px;
+  width: 100%;
+  color: #02027e;
+  background-color: #e2a5fa;
+}
+.headerInfo{
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.mainBlock{
+  width: 100%;
+  border: 1px solid black;
+}

@@ -1,0 +1,24 @@
+@import 'src/common/mixin';
+
+.mainBlockInBasket {
+  height: 70px;
+  width: 50%;
+
+  @include flex(flex, row, flex-start, center);
+  gap: 20px;
+
+  .picBlockInBasket {
+    height: 50px;
+    width: 50px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .informBlockInBasket {
+    @include flex(flex, column, center, flex-start);
+  }
+}
+
