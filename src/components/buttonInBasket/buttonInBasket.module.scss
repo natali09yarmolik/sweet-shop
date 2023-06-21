@@ -1,24 +1,20 @@
-@import 'src/common/mixin';
+@import '../../common/variables';
 
-.mainBlockInBasket {
-  height: 70px;
-  width: 50%;
-
-  @include flex(flex, row, flex-start, center);
-  gap: 20px;
-
-  .picBlockInBasket {
-    height: 50px;
-    width: 50px;
-
-    img {
-      height: 100%;
-      width: 100%;
-    }
-  }
-
-  .informBlockInBasket {
-    @include flex(flex, column, center, flex-start);
-  }
+.buttonInBasket{
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: $colorForButton;
+  color: $mainTextColor;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.buttonInBasket:hover {
+  transform: scale(1.05, 1.05);
+}
+.buttonInBasket:active{
+  background-color: $mainColor;
+  border: 1px solid $colorForButton;
 }
 

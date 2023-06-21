@@ -1,0 +1,48 @@
+@import "src/common/mixin";
+@import "src/common/variables";
+
+.formBlock {
+  @include flex(flex, column, flex-start, center);
+  gap: 20px;
+
+  .formBlockInput {
+    width: 250px;
+    height: 40px;
+    color: $mainTextColor;
+    padding: 0 20px;
+    border-radius: 10px;
+  }
+
+  .formBlockInput::placeholder {
+    color: $mainTextColor;
+  }
+
+  .formBlockInput:focus {
+    text-decoration: none;
+    outline: none;
+    border: 2px solid $secondColor;
+    box-shadow: 1px 1px 2px 0 $secondColor;
+  }
+.FormBlockOption{
+  display: none;
+}
+  .formBlockButton {
+    width: 150px;
+    height: 40px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: $colorForButton;
+    color: $mainTextColor;
+    border-radius: 10px;
+    transition: 0.3s;
+  }
+  .formBlockButton:hover{
+    transform: scale(1.05, 1.05);
+  }
+
+  .formBlockButton:active {
+    background-color: $mainColor;
+    border: 1px solid $colorForButton;
+  }
+}

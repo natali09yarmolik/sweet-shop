@@ -1,72 +1,82 @@
 [
   {
     "id": 1,
-    "picture": "../../icon/1.jpg",
-    "title": "Птичье молоко",
+    "picture": "icon/1.jpg",
+    "title": "Бисквитное",
     "price": 5,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   },
   {
     "id": 2,
-    "picture": "../../icon/2.jpg",
-    "title": "Эклер",
+    "picture": "icon/2.jpg",
+    "title": "Захер",
     "price": 3,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   },
   {
     "id": 3,
-    "picture": "../../icon/3.jpg",
-    "title": "Корзинка",
+    "picture": "icon/3.jpg",
+    "title": "Сказка",
     "price": 4,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   },
   {
     "id": 4,
-    "picture": "../../icon/4.jpg",
+    "picture": "icon/4.jpg",
     "title": "Буше",
     "price": 4.5,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   },
   {
     "id": 5,
-    "picture": "file:src/API/icon/5.jpg",
+    "picture": "icon/5.jpg",
     "title": "Прага",
     "price": 5,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   },
   {
     "id": 6,
-    "picture": "file:src/API/icon/6.jpg",
+    "picture": "icon/6.jpg",
     "title": "Опера",
     "price": 3.5,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   },
   {
     "id": 7,
-    "picture": "file:src/API/icon/7.jpg",
+    "picture": "icon/7.jpg",
     "title": "Малиновое",
     "price": 2.5,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   },
   {
     "id": 8,
-    "picture": "./src/API/icon/8.jpg",
+    "picture": "icon/8.jpg",
     "title": "Медовое",
     "price": 2,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   },
   {
     "id": 9,
-    "picture": "file:src/API/icon/9.jpg",
+    "picture": "icon/9.jpg",
     "title": "Сникерс",
     "price": 5,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   },
   {
     "id": 10,
-    "picture": "file:src/API/icon/10.jpg",
+    "picture": "icon/10.jpg",
     "title": "Марс",
     "price": 4.7,
-    "unit": "руб/шт"
+    "unit": "руб/шт",
+    "count": 1
   }
 ]

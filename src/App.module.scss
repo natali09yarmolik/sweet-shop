@@ -1,21 +1,33 @@
-.headerBlock{
-  display: block;
-  position: static;
-  height: 70px;
-  width: 100%;
-  color: #02027e;
-  background-color: #e2a5fa;
-}
-.headerInfo{
-  display: flex;
-  width: 80%;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
+@import "src/common/mixin";
+@import "src/common/variables";
+
+@media (max-width: 992px) {
+  .basketBlock {
+    min-height: 700px;
+    max-width: 90%;
+   }
 }
 
-.mainBlock{
-  width: 100%;
-  border: 1px solid black;
+.App {
+  position: relative;
+  .mainBlock {
+    width: 100%;
+    /*display: block;*/
+    position: relative;
+    @include flex(flex, column, flex-start, center);
+    z-index:1000;
+    .basketBlock {
+      position: absolute;
+      display: block;
+      width: 1000px;
+      height: 700px;
+      top: 50px;
+    }
+    .basketBlockFalse {
+      display: none;
+    }
+  }
 }
+
+
+

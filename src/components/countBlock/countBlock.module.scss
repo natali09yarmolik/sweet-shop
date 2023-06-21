@@ -1,0 +1,22 @@
+@import "src/common/mixin";
+@import "src/common/variables";
+.countBlock{
+    @include flex(flex,row, space-between, center);
+
+    .buttonCountBlock{
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        padding: 0;
+        background-color: $colorForButton;
+        font-size: 20px;
+        cursor: pointer;
+        @include flex(flex, column, space-around, center);
+    }
+    .inputCountBlock{
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+        @include flex(flex,row, center, center);
+    }
+}

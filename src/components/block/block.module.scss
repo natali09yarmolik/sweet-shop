@@ -1,15 +1,47 @@
+@import 'src/common/mixin';
+@import 'src/common/variables';
+
 .mainBlock{
-    height: 200px;
-    width: 150px;
-    border: 1px solid #464545;
+    height: 300px;
+    width: 250px;
+    border: 2px solid $mainColor;
+    border-radius: 10px;
     display: flex;
     padding: 5px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flex (flex,column, space-between, center);
+
+    .picBlock{
+        height: 60%;
+        width: 95%;
+        border-radius: 10px;
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+    }
+    h3{
+        font-size: 23px;
+    }
+    .buttonBlock{
+        width: 120px;
+        height: 30px;
+        padding: 0 10px;
+        font-size: 16px;
+        font-weight: bold;
+        color: $mainTextColor;
+        border-radius: 7px;
+        background-color: $mainColor;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .buttonBlock:hover{
+        transform: scale(1.1, 1.1);
+    }
+    .buttonBlock:active{
+        background-color: #a01dfa;
+    }
 }
-.picBlock{
-    height: 50%;
-    width: 85%;
-    background-color: #e2a5fa;
-}
+
+

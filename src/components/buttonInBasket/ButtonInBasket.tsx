@@ -1,30 +1,16 @@
-import s from 'src/components/blockInBasket/blockInBasket.module.scss'
+import s from './buttonInBasket.module.scss'
 import {FC, memo} from "react";
-import {ItemType} from "src/common/types";
-import {useActions} from "src/common/hook/useActions";
-import {itemsActions} from "src/reducer/items.reducer";
-import items from '../../items.json'
 
 type Props = {
-    id?: number
-    picture: string
     title: string
-    price: number
-    unit: string
+    onClick: () => void
 }
 
-export const BlockInBasket : FC<Props> = memo(({id, picture, title, price, unit}) => {
-
-      return (
-        <div className={s.mainBlockInBasket}>
-            <div className={s.picBlockInBasket}>
-                <img src={picture} alt={'pic'}/>
-            </div>
-            <div className={s.informBlockInBasket}>
-                <span>{title}</span>
-                <span>{price} {unit}</span>
-            </div>
-        </div>
-    )
-}
+export const ButtonInBasket: FC<Props> = memo(({title, onClick}) => {
+        return (
+            <button className={s.buttonInBasket}
+                    onClick={onClick}
+            >{title}</button>
+        )
+    }
 )

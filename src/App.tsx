@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import s from './App.module.scss'
+import {MainPage} from "./components/mainPage/MainPage";
+import {Basket} from "./components/basket/Basket";
+import {useSelector} from "react-redux";
+import {selectVisible} from "src/items.selectors";
+import {Header} from "src/components/header/Header";
+import {Particle} from "src/components/particles/Particle";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const visible = useSelector(selectVisible)
+
+    const basketClass = visible ? s.basketBlock : s.basketBlockFalse
+    return (
+        <div className={s.App}>
+            <Header/>
+            <main>
+                <Particle/>
+                <div className={s.mainBlock}>
+                    <MainPage/>
+                    <div className={basketClass}>
+                        <Basket/>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    );
 }
 
 export default App;
