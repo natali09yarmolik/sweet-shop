@@ -2,9 +2,11 @@
   "version": 2,
   "name": "sweet-shop",
   "builds": [
-    { "src": "src/backend/index.js", "use": "@vercel/node" }
+    { "src": "src/backend/index.js",
+      "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "src/backend/index.js" }
+    { "src": "/(.*)",
+      "dest": "src/backend/index.js" }
   ]
 }
