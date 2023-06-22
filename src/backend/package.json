@@ -1,5 +1,6 @@
 {
   "name": "index",
+  "homepage": "https://natali09yarmolik.github.io/sweet-shop",
   "version": "1.0.0",
   "proxy": "http://locolhost:3000",
   "description": "",

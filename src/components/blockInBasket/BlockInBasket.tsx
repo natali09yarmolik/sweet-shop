@@ -14,11 +14,11 @@ type Props = {
 }
 
 export const BlockInBasket : FC<Props> = memo(({id, picture, title, price, unit}) => {
-
+        console.log(process.env.PUBLIC_URL + picture)
       return (
         <div className={s.mainBlockInBasket}>
             <div className={s.picBlockInBasket}>
-                <img src={picture} alt={'pic'}/>
+                <img src={process.env.PUBLIC_URL + picture} alt={'pic'}/>
             </div>
             <div className={s.informBlockInBasket}>
                 <span>{title}</span>

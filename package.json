@@ -1,6 +1,6 @@
 {
-  "name": "sweet-shop",
   "homepage": "https://natali09yarmolik.github.io/sweet-shop",
+  "name": "sweet-shop",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

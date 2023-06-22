@@ -17,6 +17,6 @@ export const store = configureStore({
 export type AppRootStateType = ReturnType<typeof rootReducer>
 
 export type AppDispatch = ThunkDispatch<AppRootStateType, unknown, AnyAction>
-
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 window.store = store;

@@ -1,8 +1,6 @@
 import s from './basket.module.scss'
-import {CountBlock} from "../countBlock/CountBlock";
 import {useSelector} from "react-redux";
-import {selectItems, selectItemsInBasket, selectTotal} from "src/items.selectors";
-import {BlockInBasket} from "src/components/blockInBasket/BlockInBasket";
+import {selectItemsInBasket} from "src/items.selectors";
 import { FormBlock } from './../formBlock/FormBlock';
 import {TextBlock} from "src/components/textBlock/TextBlock";
 import {ButtonClose} from "src/components/buttonClose/ButtonClose";
