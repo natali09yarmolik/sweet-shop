@@ -16,6 +16,7 @@ export const Block : FC<ItemType> = memo(({id, picture, title, price, unit}) => 
                     addCountItems({itemId, itemCount: el.count as number}) : el))
                 totalPrice({})
             } else {
+
                 addItemsInBasket({itemId})
                 totalPrice({})
             }
