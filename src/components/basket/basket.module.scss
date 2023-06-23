@@ -4,20 +4,19 @@
 @media (max-width: 992px) {
   .basketBlock {
     min-height: 700px;
-
   }
-  .formBlock{
+  .formBlock {
     max-width: 90%;
-    /*min-height: 50%;*/
   }
 }
 
-.mainBasketBlock{
+.mainBasketBlock {
   width: 100%;
+  height: 470px;
   background-color: $mainColor;
   border-radius: 10px;
   @include flex(flex, column, flex-start, flex-end);
- /* flex-wrap: wrap;*/
+
   .basketBlock {
     position: relative;
     width: 100%;
@@ -27,52 +26,10 @@
     flex-wrap: wrap;
     gap: 10px;
 
-    /*.productBlock {
-      width: 60%;
-      border:5px solid $colorForButton;
-      border-radius: 10px;
-      padding: 10px;
-      @include flex(flex, column, space-between, unset);
-
-      .productWithCount{
-        overflow-y: auto;
-        height: 90%;
-        .blockInBasket {
-          width: 100%;
-          border:2px solid $colorForButton;
-          border-radius: 10px;
-          @include flex(flex, row, space-between, center);
-          margin-bottom: 10px;
-          padding: 0 7px;
-        }
-      }
-      .totalBlock{
-        @include flex(flex, row, space-around, center);
-        .totalPrice{
-          font-size: 20px;
-          font-weight: 500;
-        }
-        .clearForm{
-          height: 40px;
-          padding: 0 10px;
-          font-size: 16px;
-          font-weight: bold;
-          background-color: $colorForButton;
-          color: $secondColor;
-          border-radius: 10px;
-        }
-        .clearForm:focus {
-          outline: none;
-          border: 2px solid $secondColor;
-          box-shadow: 1px 1px 2px 0 $secondColor;
-        }
-      }
-
-    }*/
-    .formBlock{
+    .formBlock {
       width: 400px;
-      height: 90%;
-      border:5px solid $colorForButton;
+      height: 95%;
+      border: 5px solid $colorForButton;
       border-radius: 10px;
       padding: 10px;
       @include flex(flex, column, flex-start, center);

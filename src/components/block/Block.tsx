@@ -7,7 +7,7 @@ import {useSelector} from "react-redux";
 import {selectItemsInBasket} from "src/items.selectors";
 import img from './../../icon/1.jpg'
 
-export const Block : FC<ItemType> = memo(({id, picture, title, price, unit}) => {
+export const Block: FC<ItemType> = memo(({id, picture, title, price, unit}) => {
         const itemInBasket = useSelector(selectItemsInBasket)
         const {addItemsInBasket, totalPrice, addCountItems} = useActions(itemsActions)
         const buyHandler = (itemId: number) => {
@@ -16,23 +16,20 @@ export const Block : FC<ItemType> = memo(({id, picture, title, price, unit}) => 
                     addCountItems({itemId, itemCount: el.count as number}) : el))
                 totalPrice({})
             } else {
-
                 addItemsInBasket({itemId})
                 totalPrice({})
             }
         }
 
-    return (
-        <div className={s.mainBlock}>
-            <div className={s.picBlock}>
-                {/*<img src={picture} alt={'pic'}/>*/}
-                <img src={process.env.PUBLIC_URL + picture} alt={'pic'}/>
-                {/*<img src={picture} alt={'pic'}/>*/}
-           </div>
-            <h3>{title}</h3>
-            <span>{price} {unit}</span>
-            <button className={s.buttonBlock} onClick={()=>buyHandler(id)}>Заказать</button>
-        </div>
-    )
-}
+        return (
+            <div className={s.mainBlock}>
+                <div className={s.picBlock}>
+                    <img src={process.env.PUBLIC_URL + picture} alt={'pic'}/>
+                </div>
+                <h3>{title}</h3>
+                <span>{price} {unit}</span>
+                <button className={s.buttonBlock} onClick={() => buyHandler(id)}>Заказать</button>
+            </div>
+        )
+    }
 )

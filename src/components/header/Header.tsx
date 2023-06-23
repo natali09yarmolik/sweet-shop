@@ -5,7 +5,7 @@ import {useActions} from "src/common/hook/useActions";
 import {itemsActions} from "src/reducer/items.reducer";
 import s from 'src/components/header/Header.module.scss'
 
-export const Header:FC = memo(()=>{
+export const Header: FC = memo(() => {
     const total = useSelector(selectTotal)
     const visible = useSelector(selectVisible)
     const {changeVisibleBasket} = useActions(itemsActions)
@@ -14,7 +14,7 @@ export const Header:FC = memo(()=>{
         changeVisibleBasket({visible})
     }
     const totalSpan = total !== 0 ? s.visibleTotal : s.unvisibleTotal
-    return(
+    return (
         <header className={s.headerBlock}>
             <div className={s.containerBlock}>
                 <h1 className={s.titleBlock}>SWEET-SHOP</h1>

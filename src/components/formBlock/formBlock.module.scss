@@ -1,48 +1,81 @@
 @import "src/common/mixin";
 @import "src/common/variables";
 
-.formBlock {
-  @include flex(flex, column, flex-start, center);
-  gap: 20px;
+.formBlockMain {
+  position: relative;
 
-  .formBlockInput {
+  .formBlockAnswer {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 250px;
-    height: 40px;
-    color: $mainTextColor;
-    padding: 0 20px;
-    border-radius: 10px;
-  }
-
-  .formBlockInput::placeholder {
-    color: $mainTextColor;
-  }
-
-  .formBlockInput:focus {
-    text-decoration: none;
-    outline: none;
-    border: 2px solid $secondColor;
-    box-shadow: 1px 1px 2px 0 $secondColor;
-  }
-.FormBlockOption{
-  display: none;
-}
-  .formBlockButton {
-    width: 150px;
-    height: 40px;
-    margin-top: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    background-color: $colorForButton;
-    color: $mainTextColor;
-    border-radius: 10px;
+    height: 100px;
+    font-size: 20px;
+    background-color: $mainColor;
+    border: 3px solid $colorForButton;
+    border-radius: 7px;
+    @include flex(flex, column, center, center);
     transition: 0.3s;
   }
-  .formBlockButton:hover{
-    transform: scale(1.05, 1.05);
+
+  .formBlockAnswerNone {
+    display: none;
+    transition: 0.3s;
   }
 
-  .formBlockButton:active {
-    background-color: $mainColor;
-    border: 1px solid $colorForButton;
+  .formBlock {
+    @include flex(flex, column, flex-start, center);
+    gap: 20px;
+
+    .formBlockInput {
+      width: 250px;
+      height: 40px;
+      color: $mainTextColor;
+      padding: 0 20px;
+      border-radius: 10px;
+    }
+
+    .formBlockInputNone {
+      width: 250px;
+      height: 40px;
+      visibility: hidden;
+    }
+
+    .formBlockInput::placeholder {
+      color: $mainTextColor;
+    }
+
+    .formBlockInput:focus {
+      text-decoration: none;
+      outline: none;
+      border: 2px solid $secondColor;
+      box-shadow: 1px 1px 2px 0 $secondColor;
+    }
+
+    .FormBlockOption {
+      display: none;
+    }
+
+    .formBlockButton {
+      width: 150px;
+      height: 40px;
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color: $colorForButton;
+      color: $mainTextColor;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .formBlockButton:hover {
+      transform: scale(1.05, 1.05);
+    }
+
+    .formBlockButton:active {
+      background-color: $mainColor;
+      border: 1px solid $colorForButton;
+    }
   }
 }

@@ -9,19 +9,18 @@ type Props = {
     index: number
 }
 export const CountBlock: FC<Props> = memo(({id, count, index}) => {
-const {deleteCountItems, addCountItems, deleteItems, totalPrice} = useActions(itemsActions)
-     const minusHandler = (itemId:number, count:number, index: number) => {
-         if(count === 1){
-             deleteItems({index})
-             totalPrice({})
-         }
-        else if(count > 0){
-             deleteCountItems({itemId, count})
-             totalPrice({})
-         }
-     }
-    const plusHandler = (itemId:number, itemCount:number) => {
-        if(count > 0){
+    const {deleteCountItems, addCountItems, deleteItems, totalPrice} = useActions(itemsActions)
+    const minusHandler = (itemId: number, count: number, index: number) => {
+        if (count === 1) {
+            deleteItems({index})
+            totalPrice({})
+        } else if (count > 0) {
+            deleteCountItems({itemId, count})
+            totalPrice({})
+        }
+    }
+    const plusHandler = (itemId: number, itemCount: number) => {
+        if (count > 0) {
             addCountItems({itemId, itemCount})
             totalPrice({})
         }
@@ -29,11 +28,11 @@ const {deleteCountItems, addCountItems, deleteItems, totalPrice} = useActions(it
     return (
         <div className={s.countBlock}>
             <div className={s.buttonCountBlock}
-                 onClick={()=>minusHandler(id, count, index)}><h1>-</h1></div>
+                 onClick={() => minusHandler(id, count, index)}><h1>-</h1></div>
             <div className={s.inputCountBlock}>{count}</div>
             <div className={s.buttonCountBlock}
-                 onClick={()=>plusHandler(id, count)}
-                ><h2>+</h2></div>
+                 onClick={() => plusHandler(id, count)}
+            ><h2>+</h2></div>
         </div>
     )
 })

@@ -1,6 +1,6 @@
 @import '../../common/variables';
 
-.buttonInBasket{
+.buttonInBasket {
   height: 40px;
   padding: 0 10px;
   font-size: 16px;
@@ -10,10 +10,12 @@
   border-radius: 10px;
   transition: 0.3s;
 }
+
 .buttonInBasket:hover {
   transform: scale(1.05, 1.05);
 }
-.buttonInBasket:active{
+
+.buttonInBasket:active {
   background-color: $mainColor;
   border: 1px solid $colorForButton;
 }

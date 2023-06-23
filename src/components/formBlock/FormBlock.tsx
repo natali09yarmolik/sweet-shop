@@ -1,60 +1,67 @@
-import {ChangeEvent, FC, FormEvent, memo, useState} from "react";
+import {FC, FormEvent, memo, useState} from "react";
 import s from './formBlock.module.scss'
 import emailjs from "emailjs-com";
 import {useSelector} from "react-redux";
-import {selectItems, selectItemsInBasket} from "src/items.selectors";
-import {Simulate} from "react-dom/test-utils";
-import change = Simulate.change;
+import {selectItemsInBasket} from "src/items.selectors";
 
-
-export const FormBlock:FC = memo(()=>{
-    /*const [value, setValue] = useState('')*/
+export const FormBlock: FC = memo(() => {
     const items = useSelector(selectItemsInBasket)
-    /*const itemsJSON = JSON.stringify(items)*/
-    /*const changeHandler = () =>{
-        setValue(itemsJSON)
-    }*/
+    const [visible, setVisible] = useState(false)
+    const changeHandler = () => {
+        console.log(1)
+    }
 
-    const sentEmail = (e:FormEvent<HTMLFormElement>) => {
+    const sentEmail = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-
-        emailjs.sendForm('VVmlYXN30tWg6SLEB', 'template_cv8jnng', e.currentTarget, 'VVmlYXN30tWg6SLEB')
+        setVisible(true)
+        emailjs.sendForm('VVmlYXN30tWg6SLEB', 'template_cv8jnng',
+            e.currentTarget, 'VVmlYXN30tWg6SLEB')
             .then((result) => {
-                alert("Ваш заказ принят")
-    }, (error) => {
+                console.log(result)
+                setTimeout(() => {
+                    setVisible(false)
+                }, 3000, [visible])
+            }, (error) => {
                 error.message
             });
         e.currentTarget.reset()
     }
+    const visibleAnswer = visible ? s.formBlockAnswer : s.formBlockAnswerNone
+    const visibleForm = !visible ? s.formBlockInput : s.formBlockInputNone
     return (
-        <form className={s.formBlock} onSubmit={sentEmail}>
-            <input type={"text"}
-                   name={'name'}
-                   required
-                   placeholder={'Введите Ваше Имя'}
-                   className={s.formBlockInput}
-            />
-            <input type={"email"}
-                   name={'email'}
-                   required
-                   placeholder={'Введите Ваш email'}
-                   className={s.formBlockInput}
-            />
-            <input type={"phone"}
-                   name={'phone'}
-                   required
-                   placeholder={'Введите Ваш номер телефона'}
-                   className={s.formBlockInput}
-            />
-             <input type={"text"}
-                    name = {'message'}
-                    value={JSON.stringify(items)}
-                    className={s.FormBlockOption}
-            />
-            <input type={"submit"}
-                   value={'Оформить заказ'}
-                   className={s.formBlockButton}
-            />
-        </form>
+        <div className={s.formBlockMain}>
+            <div className={visibleAnswer}><p>Ваш заказ принят 😉</p></div>
+            <form className={s.formBlock} onSubmit={sentEmail}>
+                <input type={"text"}
+                       name={'name'}
+                       required
+                       placeholder={'Введите Ваше Имя'}
+                       className={visibleForm}
+                />
+                <input type={"email"}
+                       name={'email'}
+                       required
+                       placeholder={'Введите Ваш email'}
+                       className={visibleForm}
+                />
+                <input type={"phone"}
+                       name={'phone'}
+                       required
+                       placeholder={'Введите Ваш номер телефона'}
+                       className={visibleForm}
+                />
+                <input type={"text"}
+                       name={'message'}
+                       onChange={changeHandler}
+                       value={JSON.stringify(items)}
+                       className={s.FormBlockOption}
+                />
+                <input type={"submit"}
+                       value={'Оформить заказ'}
+                       className={s.formBlockButton}
+                />
+            </form>
+        </div>
+
     )
 })

@@ -2,40 +2,42 @@
 @import "src/common/variables";
 
 @media (max-width: 992px) {
-  .productBlock{
+  .productBlock {
     max-width: 90%;
   }
 }
 
-   .productBlock {
-      width: 550px;
-      border:5px solid $colorForButton;
+.productBlock {
+  width: 550px;
+  height: 95%;
+  border: 5px solid $colorForButton;
+  border-radius: 10px;
+  padding: 10px;
+  @include flex(flex, column, space-between, unset);
+
+  .productWithCount {
+    overflow-y: auto;
+    height: 90%;
+
+    .blockInBasket {
+      width: 100%;
+      border: 2px solid $colorForButton;
       border-radius: 10px;
-      padding: 10px;
-      @include flex(flex, column, space-between, unset);
-
-      .productWithCount{
-        overflow-y: auto;
-        height: 90%;
-        .blockInBasket {
-          width: 100%;
-          border:2px solid $colorForButton;
-          border-radius: 10px;
-          @include flex(flex, row, space-between, center);
-          margin-bottom: 10px;
-          padding: 0 7px;
-        }
-      }
-      .totalBlock{
-        @include flex(flex, row, space-around, center);
-
-        .totalPrice{
-          font-size: 20px;
-          font-weight: 500;
-        }
-
-      }
-
+      @include flex(flex, row, space-between, center);
+      margin-bottom: 10px;
+      padding: 0 7px;
     }
+  }
+
+  .totalBlock {
+    @include flex(flex, row, space-around, center);
+
+    .totalPrice {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+  }
+}
 
 

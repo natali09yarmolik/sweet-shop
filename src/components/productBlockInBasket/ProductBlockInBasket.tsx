@@ -13,7 +13,7 @@ export const ProductBlockInBasket: FC = memo(() => {
     const total = useSelector(selectTotal)
     const {totalPrice, clearItems} = useActions(itemsActions)
 
-    const clearFormHandler = () =>{
+    const clearFormHandler = () => {
         clearItems({})
         totalPrice({})
     }

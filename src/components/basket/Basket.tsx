@@ -1,7 +1,7 @@
 import s from './basket.module.scss'
 import {useSelector} from "react-redux";
 import {selectItemsInBasket} from "src/items.selectors";
-import { FormBlock } from './../formBlock/FormBlock';
+import {FormBlock} from './../formBlock/FormBlock';
 import {TextBlock} from "src/components/textBlock/TextBlock";
 import {ButtonClose} from "src/components/buttonClose/ButtonClose";
 import {FC, memo, useEffect} from "react";
