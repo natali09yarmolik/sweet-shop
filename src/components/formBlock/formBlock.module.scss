@@ -26,24 +26,25 @@
 
   .formBlock {
     @include flex(flex, column, flex-start, center);
-    gap: 26px;
+    gap: 30px;
 
     .formBlockInput {
-      width: 250px;
-      height: 45px;
+      width: 270px;
+      height: 50px;
       color: $mainTextColor;
       padding: 0 20px;
       border-radius: 10px;
     }
 
     .formBlockInputNone {
-      width: 250px;
-      height: 45px;
+      width: 270px;
+      height: 50px;
       visibility: hidden;
     }
 
     .formBlockInput::placeholder {
       color: $mainTextColor;
+      font-size: 16px;
     }
 
     .formBlockInput:focus {

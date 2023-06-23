@@ -12,7 +12,7 @@
 
 .mainBasketBlock {
   width: 100%;
-  height: 470px;
+  height: 500px;
   background-color: $mainColor;
   border-radius: 10px;
   @include flex(flex, column, flex-start, flex-end);
