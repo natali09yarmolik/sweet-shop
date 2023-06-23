@@ -26,11 +26,11 @@
 
   .formBlock {
     @include flex(flex, column, flex-start, center);
-    gap: 20px;
+    gap: 26px;
 
     .formBlockInput {
       width: 250px;
-      height: 40px;
+      height: 45px;
       color: $mainTextColor;
       padding: 0 20px;
       border-radius: 10px;
@@ -38,7 +38,7 @@
 
     .formBlockInputNone {
       width: 250px;
-      height: 40px;
+      height: 45px;
       visibility: hidden;
     }
 
