@@ -7,7 +7,7 @@ app.use(function (req, res, next) {
     const corsWhitelist = [
         'http://localhost:3000',
         'https://natali09yarmolik.github.io',
-        'http://localhost:3010/src/items'
+        /*'http://localhost:3010/src/items'*/
 
     ];
     if (corsWhitelist.indexOf(req.headers.origin) !== -1) {
