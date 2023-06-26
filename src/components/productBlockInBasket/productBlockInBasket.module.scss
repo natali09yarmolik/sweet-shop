@@ -3,13 +3,18 @@
 
 @media (max-width: 992px) {
   .productBlock {
-    max-width: 90%;
+    max-width: 95%;
+    max-height: 250px;
+    justify-content: flex-start;
+    .productWithCount{
+      max-height: 170px;
+    }
   }
 }
 
 .productBlock {
   width: 550px;
-  height: 95%;
+  height: 475px;
   border: 5px solid $colorForButton;
   border-radius: 10px;
   padding: 10px;
@@ -17,7 +22,7 @@
 
   .productWithCount {
     overflow-y: auto;
-    height: 90%;
+    height: 428px;
 
     .blockInBasket {
       width: 100%;

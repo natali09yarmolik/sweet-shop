@@ -1,6 +1,17 @@
 @import "src/common/variables";
 @import "src/common/mixin";
 
+@media (max-width: 992px) {
+  .titleBlock {
+    font-size: 2.75rem;
+    letter-spacing: 1.5px;
+  }
+.basketBlock{
+  max-width: 60px;
+  max-height: 60px;
+}
+}
+
 .headerBlock {
   display: block;
   position: static;
@@ -18,10 +29,7 @@
     @include flex(flex, row, space-between, center);
 
     .titleBlock {
-      font-size: 70px;
       margin-top: -10px;
-      font-family: 'Kablammo', cursive;
-      letter-spacing: 3px;
     }
 
     .basketBlock {
@@ -46,6 +54,7 @@
       }
 
       .unvisibleTotal {
+        margin-bottom: -7px;
         opacity: 0;
       }
     }

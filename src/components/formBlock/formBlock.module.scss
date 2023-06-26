@@ -1,6 +1,16 @@
 @import "src/common/mixin";
 @import "src/common/variables";
 
+@media (max-width: 992px) {
+  .formBlock {
+    width: 100%;
+
+    .formBlockInput {
+      margin-bottom: -10px;
+    }
+  }
+}
+
 .formBlockMain {
   position: relative;
 
@@ -26,7 +36,7 @@
 
   .formBlock {
     @include flex(flex, column, flex-start, center);
-    gap: 30px;
+    gap: 25px;
 
     .formBlockInput {
       width: 270px;

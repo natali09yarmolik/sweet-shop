@@ -1,5 +1,13 @@
 @import 'src/common/mixin';
 
+@media (max-width: 992px) {
+   .picBlockInBasket{
+      max-height: 40px;
+      max-width: 40px;
+      margin-right: -10px;
+    }
+}
+
 .mainBlockInBasket {
   height: 70px;
   width: 50%;

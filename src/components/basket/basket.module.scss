@@ -2,12 +2,21 @@
 @import "src/common/variables";
 
 @media (max-width: 992px) {
-  .basketBlock {
-    min-height: 700px;
+  .mainBasketBlock {
+    min-height: 100%;
+
+    .basketBlock {
+      max-width: 100%;
+      min-height: 100px;
+
+      .formBlock {
+        max-width: 95%;
+        max-height: 440px;
+      }
+    }
+
   }
-  .formBlock {
-    max-width: 90%;
-  }
+
 }
 
 .mainBasketBlock {
@@ -28,7 +37,7 @@
 
     .formBlock {
       width: 400px;
-      height: 95%;
+      height: 475px;
       border: 5px solid $colorForButton;
       border-radius: 10px;
       padding: 10px;

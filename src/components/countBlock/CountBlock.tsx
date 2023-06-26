@@ -28,7 +28,7 @@ export const CountBlock: FC<Props> = memo(({id, count, index}) => {
     return (
         <div className={s.countBlock}>
             <div className={s.buttonCountBlock}
-                 onClick={() => minusHandler(id, count, index)}><h1>-</h1></div>
+                 onClick={() => minusHandler(id, count, index)}><h2>−</h2></div>
             <div className={s.inputCountBlock}>{count}</div>
             <div className={s.buttonCountBlock}
                  onClick={() => plusHandler(id, count)}
