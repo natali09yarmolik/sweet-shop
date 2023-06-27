@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sweet-shop/static/css/main.9d7e2841.css",
-    "main.js": "/sweet-shop/static/js/main.11fb52a6.js",
+    "main.css": "/sweet-shop/static/css/main.d80abb1c.css",
+    "main.js": "/sweet-shop/static/js/main.eb1f2968.js",
     "static/js/787.16bde734.chunk.js": "/sweet-shop/static/js/787.16bde734.chunk.js",
     "index.html": "/sweet-shop/index.html",
-    "main.9d7e2841.css.map": "/sweet-shop/static/css/main.9d7e2841.css.map",
-    "main.11fb52a6.js.map": "/sweet-shop/static/js/main.11fb52a6.js.map",
+    "main.d80abb1c.css.map": "/sweet-shop/static/css/main.d80abb1c.css.map",
+    "main.eb1f2968.js.map": "/sweet-shop/static/js/main.eb1f2968.js.map",
     "787.16bde734.chunk.js.map": "/sweet-shop/static/js/787.16bde734.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d7e2841.css",
-    "static/js/main.11fb52a6.js"
+    "static/css/main.d80abb1c.css",
+    "static/js/main.eb1f2968.js"
   ]
 }
