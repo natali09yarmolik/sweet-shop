@@ -4,11 +4,8 @@ import {ItemType} from "src/common/types";
 
 const fetchItems = createAppAsyncThunk<{ items: ItemType[] }, void>
 ('sweet/fetchItems', async (_, {rejectWithValue}) => {
-   /* const res = await fetch('http://localhost:3010/src/items')*/
     const res = await fetch('https://sweet-shop-back.vercel.app')
-    /*console.log(res.json())*/
     const result = await res.json()
-    console.log(result)
     if (result.data) {
         return {items: result.data}
     } else {
