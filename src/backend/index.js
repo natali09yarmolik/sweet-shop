@@ -1,7 +1,10 @@
 const express = require('express')
 const app = express()
-const port = 3010
+const port = process.env.PORT || 3010
 
+app.listen(port, () => {
+    console.log('Server start' + port)
+})
 app.use(function (req, res, next) {
 
     const corsWhitelist = [
@@ -22,6 +25,3 @@ app.get('/src/items', (req, res) => {
     res.json({data: items})
 })
 
-app.listen(port, () => {
-    console.log('Server start' + port)
-})
