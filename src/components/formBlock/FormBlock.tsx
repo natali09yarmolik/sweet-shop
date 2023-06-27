@@ -20,7 +20,7 @@ export const FormBlock: FC = memo(() => {
                 console.log(result)
                 setTimeout(() => {
                     setVisible(false)
-                }, 20000, [visible])
+                }, 3000, [visible])
             }, (error) => {
                 error.message
             });
