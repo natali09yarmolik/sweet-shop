@@ -5,4 +5,3 @@ export const selectItemsInBasket = (state: AppRootStateType) => state.items.newI
 export const selectTotal = (state: AppRootStateType) => state.items.total
 export const selectVisible = (state: AppRootStateType) => state.items.visibleBasket
 
-

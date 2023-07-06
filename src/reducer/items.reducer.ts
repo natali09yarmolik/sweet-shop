@@ -17,7 +17,7 @@ type InitialStateType = {
     items: ItemType[],
     newItems: ItemType[],
     total: number,
-    visibleBasket: boolean
+    visibleBasket: boolean,
 }
 const initialState: InitialStateType = {
     items: [],

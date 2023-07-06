@@ -17,7 +17,7 @@ function App() {
             <Header/>
             <main>
                 <Particle/>
-                <div className={s.mainBlock}>
+                <div id={'id-basket'} className={s.mainBlock}>
                     <MainPage/>
                     <div className={basketClass}>
                         <Basket/>

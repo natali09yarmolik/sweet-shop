@@ -2,6 +2,7 @@
 @import 'src/common/variables';
 
 .mainBlock {
+    position: relative;
     height: 300px;
     width: 250px;
     border: 2px solid $mainColor;
@@ -9,7 +10,25 @@
     display: flex;
     padding: 5px;
     @include flex(flex, column, space-between, center);
-
+    .visibleMessage{
+        position: absolute;
+        height: 50px;
+        width: 170px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $mainColor;
+        border-radius: 7px;
+        font-size: 16px;
+        font-weight: bold;
+        @include flex(flex, column, center, center);
+        color: $mainTextColor;
+        z-index: 100;
+    }
+    .unvisibleMessage{
+        display: none;
+        transition: 0.3s;
+    }
     .picBlock {
         height: 60%;
         width: 95%;
