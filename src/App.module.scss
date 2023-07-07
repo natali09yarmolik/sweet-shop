@@ -3,7 +3,7 @@
 
 @media (max-width: 992px) {
   .basketBlock {
-    min-height: 750px;
+    min-height: auto;
     max-width: 90%;
 
    }
@@ -21,7 +21,8 @@
       position: absolute;
       display: block;
       width: 1000px;
-      height: 700px;
+      height: 550px;
+      min-height: auto;
       top: 50px;
     }
     .basketBlockFalse {

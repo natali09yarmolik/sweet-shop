@@ -4,19 +4,18 @@ import {selectItemsInBasket} from "src/items.selectors";
 import {FormBlock} from './../formBlock/FormBlock';
 import {TextBlock} from "src/components/textBlock/TextBlock";
 import {ButtonClose} from "src/components/buttonClose/ButtonClose";
-import {FC, memo, useEffect} from "react";
+import {FC, memo, useEffect, useState} from "react";
 import {useActions} from "src/common/hook/useActions";
 import {itemsActions} from "src/reducer/items.reducer";
 import {ProductBlockInBasket} from "src/components/productBlockInBasket/ProductBlockInBasket";
+import {ButtonInBasket} from "src/components/buttonInBasket/ButtonInBasket";
 
 export const Basket: FC = memo(() => {
     const itemInBasket = useSelector(selectItemsInBasket)
-
+    const itemsStart = localStorage.getItem('items')
     const {addItemsFromLocal, totalPrice} = useActions(itemsActions)
 
-
     useEffect(() => {
-        const itemsStart = localStorage.getItem('items')
         if (itemsStart) {
             const items = JSON.parse(itemsStart)
             addItemsFromLocal({items})
@@ -36,6 +35,6 @@ export const Basket: FC = memo(() => {
                     <FormBlock/>
                 </div>
             </div>
-        </div>
+       </div>
     )
 })

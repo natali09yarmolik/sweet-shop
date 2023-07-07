@@ -2,26 +2,13 @@
 @import "src/common/variables";
 
 @media (max-width: 992px) {
-  .mainBasketBlock {
-    min-height: 100%;
-
-    .basketBlock {
-      max-width: 100%;
-      min-height: 100px;
-
-      .formBlock {
+       .formBlock {
         max-width: 97%;
-        max-height: 440px;
+        min-height: 440px;
       }
-    }
-
-  }
-
 }
-
 .mainBasketBlock {
   width: 100%;
-  height: 550px;
   background-color: $mainColor;
   border-radius: 10px;
   @include flex(flex, column, flex-start, flex-end);
@@ -37,7 +24,7 @@
 
     .formBlock {
       width: 400px;
-      height: 475px;
+      height: 90%;
       border: 5px solid $colorForButton;
       border-radius: 10px;
       padding: 10px;
